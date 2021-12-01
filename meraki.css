@@ -1,0 +1,3956 @@
+/**
+*
+* MERAKICSS: CSS MASTER FILE
+*
+* CSS INDEX:
+* > GRID SYSTEM:line 97
+*   > Media Queries:line 179
+*
+* > WAYFINDER:line 193
+*   > Brand Name:line 205
+*   > Catalog Items:line 217
+*   > Catalog Menu:line 243
+*   > Media Queries:line 275
+*     > XS:line 276
+*     > S:line 314
+*     > M:line 332
+*     > L:line 350
+*     > XL:line 367
+*
+* > BACKGROUND IMAGE:line 386
+*
+* > BILLBOARD:line 396
+*   > Billboard Container:line 397
+*   > Billboard Contents:line 421
+*     > Billboard Heading:line 427
+*     > Billboard Paragraph:line 435
+*     > Billboard Button:line 444
+*   > Media Queries:line 466
+*     > XS:line 467
+*     > S:line 504
+*     > M:line 542
+*     > L:line 579
+*     > XL:line 616
+*
+* > GALLERY:line 655
+*   > Gallery Container:line 656
+*   > Slides:line 665
+*   > Gallery Content:line 704
+*   > Gallery Key:line 719
+*   > Media Queries:line 741
+*     > XS:line 742
+*     > S:line 773
+*     > M:line 804
+*     > L:line 835
+*     > XL:line 866
+*
+* > POPUPS:line 899
+*   > Popup Container:line 900
+*   > All Buttons:line 914
+*     > Small Button:line 939
+*     > Medium Button:line 959
+*     > Large Button:line 975
+*   > Popup Content:line 991
+*   > Popup Alert:line 1028
+*
+* > CARDS:line 1048
+*   > Card Deck:line 1049
+*   > Card:line 1057
+*   > Card Content:line 1074
+*   > Card Shadow (Helper):line 1101
+*   > Media Queries:line 1106
+*
+* > CONTAINER:line 1145
+* 
+* > HELPERS:line 1153
+*   > Height:line 1154
+*   > Heading Size:line 1185
+*   > Text Size:line 1206
+*   > Text Color:line 1227
+*   > Text Align:line 1268
+*   > Capitalization:line 1281
+*   > Width:line 1294
+*   > Red:line 1315
+*   > Orange:line 1564
+*   > Yellow:line 1757
+*   > Green:line 2022
+*   > Blue:line 2319
+*   > Purple:line 2576
+*   > Pink:line 2817
+*   > White:line 2986
+*   > Black:line 3251
+*   > Gray:line 3396
+*   > Brown:line 3597
+*
+*/
+
+
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+  }
+  
+  
+  
+  /* GRID SYSTEM */
+  .grid {
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .section {
+    float: left;
+  }
+  
+  .s-1 {
+    width: 7.875%;
+    max-width: 100%;
+  }
+  
+  .s-2 {
+    width: 16.6666%;
+    max-width: 100%;
+  }
+  
+  .s-3 {
+    width: 25%;
+    max-width: 100%;
+  }
+  
+  .s-4 {
+    width: 33.3333%;
+    max-width: 100%;
+  }
+  
+  .s-5 {
+    width: 41.375%;
+    max-width: 100%;
+  }
+  
+  .s-6 {
+    width: 50%;
+    max-width: 100%; 
+  }
+  
+  .s-7 {
+    width: 58.125%;
+    max-width: 100%;
+  }
+  
+  .s-8 {
+    width: 66.5%;
+    max-width: 100%;
+  }
+  
+  .s-9 {
+    width: 74.875%;
+    max-width: 100%;
+  }
+  
+  .s-10 {
+    width: 83.25%;
+    max-width: 100%;
+  }
+  
+  .s-11 {
+    width: 91.625%;
+    max-width: 100%;
+  }
+  
+  .s-12 {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .content-box { /* do not delete */
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* MEDIA QUERIES - grid system */
+  @media only screen and (max-width: 850px) {
+    .section {
+      width: 100%;
+      float: none;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  
+  
+  /* WAYFINDER */
+  .wayfinder {
+    width:100%;
+    background-color:#f2f2f2;
+    font-family: 'Quicksand', sans-serif;
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items:center;
+    z-index:5;
+  }
+  
+  /* brand name */
+  .wayfinder-logo {
+    color:#4d4d4d;
+    position: relative;
+    left:4%;
+    width:25%;
+  }
+  
+  .wayfinder-logo > h1 {
+    font-weight:500;
+  }
+  
+  /* catalog items */
+  .catalog-container {
+    position: relative;
+    width:75%;
+    right:2%;
+  }
+  
+  .catalog-container > ul {
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+  }
+  
+  .catalog > li {
+    float:left;
+    list-style-type:none;
+    position: relative;
+    margin-left:4%;
+    font-weight: 500;
+  }
+  
+  .way-link {
+    color:#8c8c8c;
+    text-decoration:none;
+  }
+  
+  /* menu (catalog) */
+  .wayfinder-menu {
+    display:none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    width:100%;
+    justify-content: center;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    transition: 0.4s;
+    background-color: black;
+  }
+  
+  .change.bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  
+  .change.bar2 {
+    opacity: 0;
+  }
+  
+  .change.bar3 {
+    -webkit-transform: rotate(45deg) translate(-3px, -3px);
+    transform: rotate(45deg) translate(-3px, -3px);
+  }
+  
+  /* MEDIA QUERIES - wayfinder */
+  /* extra-small */
+  @media (max-width:900px) {
+  
+    .wayfinder {
+      height:4em;
+    }
+  
+    .wayfinder-menu {
+      display:flex;
+    }
+  
+    .catalog-container {
+      width: 100%;
+      height:100%;
+      position: absolute;
+    }
+  
+    .catalog {
+      position: fixed;
+      bottom: 15%;
+      width: 100%;
+      color: #8c8c8c; 
+      display: flex;
+      justify-content:center;  
+      flex-direction:column-reverse;
+    } 
+      
+    .catalog > li {
+      background-color: #f2f2f2;
+      padding: 7px;
+      text-align: center;
+      margin-bottom: 0.5%;
+      color: #8c8c8c;
+      font-size: 0.9585em;
+    }
+  
+  }
+  
+  /* small */
+  @media (min-width:668px) {
+  
+    .wayfinder {
+      height:4em;
+    }
+  
+    .wayfinder-logo > h1 {
+      font-size:1.5075em;
+    }
+  
+    .catalog > li {
+      padding: 10px;
+      font-size:1.0595em;
+    }
+  
+  }
+  
+  /* medium */
+  @media (min-width:901px) {
+  
+    .wayfinder {
+      height:4.25em;
+    }
+  
+    .wayfinder-logo > h1 {
+      font-size:1.7550em;
+    }
+  
+    .catalog > li {
+      padding: 0;
+      font-size:1.1595em;
+    }
+  
+  }
+  
+  /* large */
+  @media (min-width:1301px) {
+  
+    .wayfinder {
+      height:4.5em;
+    }
+  
+    .wayfinder-logo > h1 {
+      font-size:1.9550em;
+    }
+  
+    .catalog > li {
+      font-size:1.2595em;
+    }
+  
+  }
+  
+  /* extra-large */
+  @media (min-width:1601px) {
+  
+    .wayfinder {
+      height:4.65em;
+    }
+  
+    .wayfinder-logo > h1 {
+      font-size:1.8550em;
+    }
+  
+    .catalog > li {
+      font-size:1.2595em;
+    }
+  
+  }
+  
+  
+  /* BACKGROUND IMAGE */
+  .bg-img {
+    background-image: url(pic.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  
+  /* BILLBOARD */
+  /* billboard container */
+  .billboard-container {
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+  }
+  
+  .billboard {
+    margin:auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #212121;
+    font-family: 'Raleway', sans-serif;
+    overflow:hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  /* billboard contents */
+  .billboard-content {
+    max-width:75%;
+    margin:0 auto;
+  }
+  
+  /* billboard heading */
+  .billboard h1 {
+    font-weight: 900;
+    margin-bottom:5vh;
+    display: flex;
+    justify-content: center;
+  } 
+  
+  /* billboard paragraph */
+  .billboard p {
+    margin-bottom:2vh;
+  }
+  
+  .billboard-picture {
+    background-image: url(pic4.jpg);
+  }
+  
+  /* billboard button */
+  .button-space {
+    width: 100%;
+  }
+  
+  .button-body {
+    background-color: #3171f2;
+    color: white;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-top: 3vh;
+    display: inline-block;
+    text-decoration:none;
+    padding:9px 14px;
+  }
+  
+  .button-body:hover {
+    background-color: #0447cd;
+    transition: background-color 1.5s ease;
+  }
+  
+  
+  /* MEDIA QUERIES - Billboard */
+  /* extra-small ie phone */
+  @media (min-width:450px) {
+  
+    .billboard h1 {
+      font-size: 2.8125em;
+    }
+  
+      .billboard h2 {
+          font-size: 2.3125em;
+      }
+  
+      .billboard h3 {
+      font-size: 1.9825em;
+    }
+  
+    .billboard h4 {
+      font-size: 1.8125em;
+    }
+  
+    .billboard h5 {
+      font-size: 1.67em;
+    }
+  
+    .billboard h6 {
+      font-size: 1.51em;
+    }
+  
+    .billboard p, .billboard li, .billboard a {
+      font-size: 1.5625em;
+    }
+  
+    .button-body {
+      font-size: 0.8575em;
+    }
+  
+  }
+  
+  /* small ie tablet, chromebook */
+  @media (min-width:668px) {
+  
+    .billboard h1 {
+      font-size: 4.0625em;
+    }
+  
+      .billboard h2 {
+      font-size: 3.5625em;
+    }
+  
+    .billboard h3 {
+      font-size: 3.2325em;
+    }
+  
+    .billboard h4 {
+      font-size: 3.0625em;
+    }
+  
+    .billboard h5 {
+      font-size: 2.92em;
+    }
+  
+    .billboard h6 {
+      font-size: 2.7575em;
+    }
+  
+    .billboard p, .billboard li, .billboard a {
+      font-size: 1.875em;
+    }
+  
+    .button-body {
+      font-size: 1.2575em;
+    }
+  
+  }
+  
+  
+  /* medium ie 13 inch  */
+  @media (min-width:901px) {
+  
+    .billboard h1 {
+      font-size: 5em;
+    }
+  
+    .billboard h2 {
+      font-size: 4.5em;
+    }
+  
+    .billboard h3 {
+      font-size: 4.17em;
+    }
+  
+    .billboard h4 {
+      font-size: 4em;
+    }
+  
+    .billboard h5 {
+      font-size: 3.83em;
+    }
+  
+    .billboard h6 {
+      font-size: 3.67em;
+    }
+  
+    .billboard p, .billboard li, .billboard a {
+      font-size: 2.1875em;
+    }
+  
+    .button-body {
+      font-size: 1.4525em;
+    }
+  
+  }
+  
+  /* large ie more than 13 inch, less than 27 inch */
+  @media (min-width:1301px) {
+  
+    .billboard h1 {
+      font-size: 5.3125em;
+    }
+  
+    .billboard h2 {
+      font-size: 4.8125em;
+    }
+  
+    .billboard h3 {
+      font-size: 4.488125em;
+    }
+  
+    .billboard h4 {
+      font-size: 4.27875em;
+    }
+  
+    .billboard h5 {
+      font-size: 4.13625em;
+    }
+  
+    .billboard h6 {
+      font-size: 3.97625em;
+    }
+  
+    .billboard p, .billboard li, .billboard a {
+      font-size: 2.5em;
+    }
+  
+    .button-body {
+      font-size: 1.5625em;
+    }
+  
+  }
+  
+  /* extra-large ie 27 inch and above */
+  @media (min-width:1601px) {
+  
+    .billboard h1 {
+      font-size: 5.625em;
+    }
+  
+    .billboard h2 {
+      font-size: 5.125em;
+    }
+  
+    .billboard h3 {
+      font-size: 4.795em;
+    }
+  
+    .billboard h4 {
+      font-size: 4.625em;
+    }
+  
+    .billboard h5 {
+      font-size: 4.4825em;
+    }
+  
+    .billboard h6 {
+      font-size: 4.3225em;
+    }
+  
+    .billboard p, .billboard li, .billboard a {
+      font-size: 2.8125em;
+    }
+  
+    .button-body {
+      font-size: 1.875em;
+    }
+  
+  }
+  
+  
+  
+  /* GALLERY */
+  /* gallery container */
+  .gallery-container {
+    position:relative;
+    margin:auto;
+    overflow:hidden;
+    width:100%;
+    height:75vh;
+  }
+  
+  /* slides */
+  .slides {
+    width:100%;
+    height:100%;
+  }
+  
+  .slide {
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align:center;
+    cursor: pointer;
+  }
+  
+  .firstSlide {
+    background-image: url(pic1.jpg);
+  }
+  
+  .secondSlide {
+    background-image: url(pic2.jpg);
+  }
+  
+  .thirdSlide {
+    background-image: url(pic3.jpg);
+  }
+  
+  .fourthSlide {
+    background-image: url(pic4.jpg);
+  }
+  
+  .fifthSlide {
+    background-image: url(pic5.jpg);
+  }
+  
+  /* gallery content */
+  .slide-content {
+    font-family: 'Raleway', sans-serif;
+    max-width: 75%;
+    margin:0 auto;
+  }
+  
+  .slide-heading {
+    color:hsla(0, 0%, 51%, 1);
+  }
+  
+  .slide-caption {
+    color:hsla(0, 0%, 51%, 1);
+  }
+  
+  /* gallery key */
+  .gallery-key {
+    position:absolute;
+    bottom:5%;
+    width:100%;
+    text-align:center;
+  }
+  
+  .key {
+    cursor:pointer;
+    height:15px;
+    width:15px;
+    background-color: hsla(0, 0%, 63%, 0.78);
+    border-radius:50%;
+    display:inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .active, .key:hover, .key:active {
+    background-color:hsla(0, 2%, 24%, 0.6);
+  }
+  
+  /* Media Queries - gallery */
+  /* extra small */
+   @media (min-width:450px) {
+    .slide h1 {
+      font-size:2.8025em;
+    }
+  
+    .slide h2 {
+      font-size:2.6025em;
+    }
+  
+    .slide h3 {
+      font-size:2.4025em;
+    }
+  
+    .slide h4 {
+      font-size:2.2025em;
+    }
+  
+    .slide h5 {
+      font-size:2.0025em;
+    }
+  
+    .slide h6 {
+      font-size:1.8025em;
+    }
+  
+    .slide-caption, .slide p, .slide li, .slide a {
+      font-size:1.5625em;
+    }
+  }
+  
+  /* small */
+  @media (min-width:668px) {
+    .slide h1 {
+      font-size:3.1025em;
+    }
+  
+    .slide h2 {
+      font-size:2.9025em;
+    }
+  
+    .slide h3 {
+      font-size:2.7025em;
+    }
+  
+    .slide h4 {
+      font-size:2.5025em;
+    }
+  
+    .slide h5 {
+      font-size:2.3025em;
+    }
+  
+    .slide h6 {
+      font-size:2.1025em;
+    }
+  
+    .slide-caption, .slide p, .slide li, .slide a {
+      font-size:1.7515em;
+    }
+  }
+  
+  /* medium */
+  @media (min-width:901px) {
+    .slide h1 {
+      font-size:4.2560em;
+    }
+  
+    .slide h2 {
+      font-size:4.0060em;
+    }
+  
+    .slide h3 {
+      font-size:3.7560em;
+    }
+  
+    .slide h4 {
+      font-size:3.5060em;
+    }
+  
+    .slide h5 {
+      font-size:3.2560em;
+    }
+  
+    .slide h6 {
+      font-size:3.0060em;
+    }
+  
+    .slide-caption, .slide p, .slide li, .slide a {
+      font-size:1.9575em;
+    }
+  }
+  
+  /* large */
+  @media (min-width:1301px) {
+    .slide h1 {
+      font-size:4.7525em;
+    }
+  
+    .slide h2 {
+      font-size:4.2575em;
+    }
+  
+    .slide h3 {
+      font-size:3.7525em;
+    }
+  
+    .slide h4 {
+      font-size:3.2575em;
+    }
+  
+    .slide h5 {
+      font-size:2.7525em;
+    }
+  
+    .slide h6 {
+      font-size:2.2575em;
+    }
+  
+    .slide-caption, .slide p, .slide li, .slide a {
+      font-size:2.2515em;
+    }
+  }
+  
+  /* extra large */ 
+  @media (min-width:1601px) {
+    .slide h1 {
+      font-size:5.7525em;
+    }
+  
+    .slide h2 {
+      font-size:5.5025em;
+    }
+  
+    .slide h3 {
+      font-size:5.2525em;
+    }
+  
+    .slide h4 {
+      font-size:5.0025em;
+    }
+  
+    .slide h5 {
+      font-size:4.7525em;
+    }
+  
+    .slide h6 {
+      font-size:4.5025em;
+    }
+  
+    .slide-caption, .slide p, .slide li, .slide a  {
+      font-size:2.5em;
+    }
+  } 
+  
+  
+  
+  /* POPUPS */
+  /* popup container */
+  .popup-container {
+    width: 30%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #DBDBDB;
+    padding: 12px;
+    border-radius: 4px;
+  } 
+  
+  /* all buttons */
+  .popup-common {
+    width: fit-content;
+    height: 1.5em;
+    display: flex;
+    display: -webkit-flex; 
+    justify-content: center;
+    align-items: center; 
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    transition: background-color 0.5s ease;
+  }
+  
+  .popup-common button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .popup-common:focus {
+    outline: 0;
+  }
+  
+  /* small button */
+  .sm-popup-button button {
+    background-color:  #9BC4ED;
+    font-size: 15px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 4px;
+  }
+  
+  .sm-popup-button button:hover {
+    background-color: #83ADF1;
+  }
+  
+  .sm-popup-button button:focus, .med-popup-button button:focus,.lg-popup-button button:focus {
+    outline: 0;
+  }
+  
+  #popup-small {
+    background-color: #addb98;
+  }
+  
+  /* medium button */
+  .med-popup-button button{
+    background-color:  #9B9BED;
+    font-size: 23px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 4px;
+  }
+  
+  .med-popup-button button:hover {
+    background-color: #8F8FFD;
+  } 
+  
+  #popup-medium {
+    background-color: #80a8ff;
+  }
+  
+  /* large button */
+  .lg-popup-button button {
+    background-color: #C49BED;
+    font-size: 33px;
+    padding: 5px 9px 5px 9px;
+    border-radius: 4px;
+  }
+  
+  .lg-popup-button button:hover {
+    background-color: #CE7FFF;
+  }  
+  
+  #popup-large {
+    background-color: #ffbf80;
+  }
+  
+  /* popup content */
+  .popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: fit-content;
+    background-color: #DBDBDB;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: 2em;
+    z-index: 5;
+  }
+  
+  .intext-button {
+    background-color:  #9BC4ED;
+    transition: background-color 0.5s ease;
+    width: fit-content;
+    height: 2em;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .intext-button:hover {
+    transition: background-color 0.5s ease;
+    background-color: #83ADF1;
+  
+  }
+  
+  .intext-button:focus {
+    outline: 0;
+  }
+  
+  /* popup alert */
+  .popup-alert {
+    width: 40%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    padding: 3em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  
+  /* CARDS */
+  /* Card Deck */
+  .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    grid-gap: .5rem;
+    flex-flow: column wrap;
+  }
+  
+  /* Card */
+  .card {
+    height:auto;
+    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-top: 0.75rem;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
+    font-family: 'Raleway', sans-serif;
+    border: .0025rem solid lightgrey;
+    float: left;
+    margin-left: 1%;
+  }
+  
+  /* Card Content */
+  .card-content {
+    padding: 5%;
+    color: hsla(0, 0%, 31%, 1);
+  }
+  
+  .card-pg {
+    font-weight: 200;
+  }
+  
+  .card-heading {
+    line-height: 75%;
+  }
+  
+  .card-heading h2, .card-heading h3 {
+    margin-bottom: 20px;
+  }
+  
+  .card-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Card Shadow - helper */
+  .card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* rounded corners to card */
+  .card-rnd {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+  
+  /* rounded corners to img */
+  .img-rnd {
+    border-radius: 5px;
+  }
+  
+  /* MEDIA QUERIES - cards */
+  @media only screen and (max-width: 600px) {
+  
+     .deck {
+         grid-template-columns: repeat(auto-fit, minmax(97%, 1fr)); 
+         grid-gap: .5rem;
+         margin-left: -1%;
+     }
+  
+    .card-image {
+        height:20rem;
+    }
+    
+  } 
+  @media only screen and (max-width: 800px) {
+  
+      .deck {
+         grid-template-columns: repeat(auto-fit, minmax(95%, 1fr)); 
+         grid-gap: .5rem;
+         margin-left: -1%;
+     }
+  
+     .card-image {
+       height:20rem;
+     }
+  
+  } 
+  
+  @media only screen and (min-width: 800px) {
+    .card-image {
+      width: 95%;
+    }
+  } 
+  
+  
+  
+  /* CONTAINER */
+  .container {
+    box-sizing: border-box;
+    padding: 5px 6px 1.75px 6px;
+  }
+  
+  
+  
+  /* HELPERS */
+  /* height */
+  .h-100 {
+      width: 100%;
+    height: 100vh;
+    background-size: 100% 100vh;
+  }
+  
+  .h-75 {
+    width: 100%;
+    height: 75vh;
+    background-size: 100% 75vh;
+  }
+  
+  .h-50 {
+      width: 100%;
+    height: 50vh;
+    background-size: 100% 50vh;
+  }
+  
+  .h-33 {
+      width: 100%;
+    height: 33vh;
+    background-size: 100% 33vh;
+  }
+  
+  .h-25 {
+    width: 100%;
+    height: 25vh;
+    background-size: 100% 25vh;
+  }
+  
+  /* heading size */
+  .h-xl {
+    font-size:55px;
+  }
+  
+  .h-lg {
+    font-size:45px;
+  }
+  
+  .h-md {
+    font-size:35px;
+  }
+  
+  .h-sm {
+    font-size:25px;
+  }
+  
+  .h-xs {
+    font-size:20px;
+  }
+  
+  /* text-size */
+  .txt-xl {
+    font-size:35px;
+  }
+  
+  .txt-lg {
+    font-size:30px;
+  }
+  
+  .txt-md {
+    font-size:25px;
+  }
+  
+  .txt-sm {
+    font-size:20px;
+  }
+  
+  .txt-xs {
+    font-size:15px;
+  }
+  
+  /* text color */
+  .txt-red {
+    color:red;
+  }
+  
+  .txt-orange {
+    color:orange;
+  }
+  
+  .txt-yellow {
+    color:yellow;
+  }
+  
+  .txt-green {
+    color:green;
+  }
+  
+  .txt-blue {
+    color:blue;
+  }
+  
+  .txt-purple {
+    color:purple;
+  }
+  
+  .txt-pink {
+    color:pink;
+  }
+  
+  .txt-black {
+    color:black;
+  }
+  
+  .txt-white {
+    color:white;
+  }
+  
+  .txt-brown {
+    color:brown;
+  }
+  
+  /* text align */
+  .txt-left {
+    text-align: left;
+  }
+  
+  .txt-right {
+    text-align: right;
+  }
+  
+  .txt-center {
+    text-align: center;
+  }
+  
+  /* capitalization */
+  .all-upper {
+    text-transform: uppercase;
+  }
+  
+  .all-lower {
+    text-transform: lowercase;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+  /* width */
+  .width-full {
+    width:100%;
+  }
+  
+  .width-lg {
+    width:85%
+  }
+  
+  .width-md {
+    width:65%;
+  }
+  
+  .width-sm {
+    width:45%;
+  }
+  
+  .width-xs {
+    width:30%;
+  }
+  
+  /* red */
+  .red-txt {
+    color:	#FF0000;
+  }
+  
+  .red-bg {
+    background-color:	#FF0000;
+  }
+  
+  .burgundy-txt {
+    color:#730202;
+  }
+  
+  .burgundy-bg {
+    background-color:#730202;
+  }
+  
+  .terracotta-txt {
+    color: #c34e3d;
+  }
+  
+  .terracotta-bg {
+    background-color: #c34e3d;
+  }
+  
+  .redclay-txt {
+    color:#ae3729;
+  }
+  
+  .redclay-bg {
+    background-color:#ae3729;
+  }
+  
+  .cherry-txt {
+    color:#861717;
+  }
+  
+  .cherry-bg {
+    background-color: #861717;
+  }
+  
+  .rose-txt {
+    color:#d92626;
+  }
+  
+  .rose-bg {
+    background-color:#d92626;
+  }
+  
+  .jelly-txt {
+    color:#4d0d0d;
+  }
+  
+  .jelly-bg {
+    background-color:#4d0d0d;
+  }
+  
+  .merlot-txt {
+    color:#421615;
+  }
+  
+  .merlot-bg {
+    background-color:#421615;
+  }
+  
+  .garnet-txt {
+    color:#4d0d0d;
+  }
+  
+  .garnet-bg {
+    background-color:#4d0d0d;
+  }
+  
+  .crimson-txt {
+    color:#a81d1d;
+  }
+  
+  .crimson-bg {
+    background-color:#a81d1d;
+  }
+  
+  .ruby-txt {
+    color:#7d1616;
+  }
+  
+  .ruby-bg {
+    background-color:#7d1616;
+  }
+  
+  .scarlet-txt {
+    color: #7e1616;
+  }
+  
+  .scarlet-bg {
+    background-color: #7e1616;
+  }
+  
+  .wine-txt {
+    color:#3b0a0a;
+  }
+  
+  .wine-bg {
+    background-color:#3b0a0a;
+  }
+  
+  .brick-txt {
+    color:#6a1b12;
+  }
+  
+  .brick-bg {
+    background-color:#6a1b12;
+  }
+  
+  .apple-txt {
+    color:#981b1b;
+  }
+  
+  .apple-bg {
+    background-color:#981b1b;
+  }
+  
+  .mahogany-txt {
+    color:#320a0a;
+  }
+  
+  .mahogany-bg {
+    background-color:#320a0a;
+  }
+  
+  .bloodred-txt {
+    color:#5d1010;
+  }
+  
+  .bloodred-bg {
+    background-color:#5d1010;
+  }
+  
+  .sangria-txt {
+    color:#4a1110;
+  }
+  
+  .sangria-bg {
+    background-color:#4a1110;
+  }
+  
+  .berry-txt {
+    color:#651212;
+  }
+  
+  .berry-bg {
+    background-color:#651212;
+  }
+  
+  .currant-txt {
+    color:#540f0f;
+  }
+  
+  .currant-bg {
+    background-color:#540f0f;
+  }
+  
+  .blush-txt {
+    color:#ac3f39;
+  }
+  
+  .blush-bg {
+    background-color:#ac3f39;
+  }
+  
+  .candy-txt {
+    color:#c72323;
+  }
+  
+  .candy-bg {
+    background-color:#c72323;
+  }
+  
+  .lipstick-txt {
+    color:#8a1818;
+  }
+  
+  .lipstick-bg {
+    background-color:#8a1818;
+  }
+  
+  .imperial-txt {
+    color:#ED2939;
+  }
+  
+  .imperial-bg {
+    background-color: #ED2939;
+  }
+  
+  .darkred-txt {
+    color:#781515;
+  }
+  
+  .darkred-bg {
+    background-color:#781515;
+  }
+  
+  .lightred-txt {
+    color:#e45147;
+  }
+  
+  .lightred-bg {
+    background-color:#e45147;
+  }
+  
+  .indianred-txt {
+    color:#CD5C5C;
+  }
+  
+  .indianred-bg {
+    background-color:#CD5C5C;
+  }
+  
+  .lightcoral-txt {
+    color:#F08080;
+  }
+  
+  .lightcoral-bg {
+    background-color:#F08080;
+  }
+  
+  .salmon-txt {
+    color:#FA8072;
+  }
+  
+  .salmon-bg {
+    background-color:#FA8072;
+  }
+  
+  .darksalmon-txt {
+    color:#E9967A;
+  }
+  
+  .darksalmon-bg {
+    background-color:#E9967A;
+  }
+  
+  .lightsalmon-txt {
+    color:#FFA07A;
+  }
+  
+  .lightsalmon-bg {
+    background-color:#FFA07A;
+  }
+  
+  /* orange */
+  .orange-txt {
+    color:#FF6600;
+  }
+  
+  .orange-bg {
+    color:#FF6600;
+  }
+  
+  .tangerine-txt {
+    color:#e86c28;
+  }
+  
+  .tangerine-bg {
+    background-color:#e86c28;
+  }
+  
+  .marigold-txt {
+    color:#f09e28;
+  }
+  
+  .marigold-bg {
+    background-color:#f09e28;
+  }
+  
+  .cider-txt {
+    color:#a4531e;
+  }
+  
+  .cider-bg {
+    background-color:#a4531e;
+  }
+  
+  .rust-txt {
+    color:#783015;
+  }
+  
+  .rust-bg {
+    background-color:#783015;
+  }
+  
+  .ginger-txt {
+    color:#ac421e;
+  }
+  
+  .ginger-bg {
+    background-color:#ac421e;
+  }
+  
+  .tiger-txt {
+    color:#e55328;
+  }
+  
+  .tiger-bg {
+    background-color:#e55328;
+  }
+  
+  .fire-txt {
+    color:#d34025;
+  }
+  
+  .fire-bg {
+    background-color:#d34025;
+  }
+  
+  .bronze-txt {
+    color:#a0421c;
+  }
+  
+  .bronze-bg {
+    background-color:#a0421c;
+  }
+  
+  .cantaloupe-txt {
+    color:#ec8e5e;
+  }
+  
+  .cantaloupe-bg {
+    color:#ec8e5e;
+  }
+  
+  .apricot-txt {
+    color:#e66d27;
+  }
+  
+  .apricot-bg {
+    background-color:#e66d27;
+  }
+  
+  .clay-txt {
+    color:#6a3012;
+  }
+  
+  .clay-bg {
+    background-color:#6a3012;
+  }
+  
+  .honey-txt {
+    color:#e58526;
+  }
+  
+  .honey-bg {
+    background-color:#e58526;
+  }
+  
+  .carrot-txt {
+    color:#e65c28;
+  }
+  
+  .carrot-bg {
+    background-color:#e65c28;
+  }
+  
+  .squash-txt {
+    color:#bb4820;
+  }
+  
+  .squash-bg {
+    background-color:#bb4820;
+  }
+  
+  .spice-txt {
+    color:#652b11;
+  }
+  
+  .spice-bg {
+    background-color:#652b11;
+  }
+  
+  .marmalade-txt {
+    color:#c44b22;
+  }
+  
+  .marmalade-bg {
+    background-color:#c44b22;
+  }
+  
+  .amber-txt {
+    color:#752314;
+  }
+  
+  .amber-bg {
+    background-color:#752314;
+  }
+  
+  .sandstone-txt {
+    color:#ca5c23;
+  }
+  
+  .sandstone-bg {
+    background-color:#ca5c23;
+  }
+  
+  .yam-txt {
+    color:#be4421;
+  }
+  
+  .yam-bg {
+    background-color:#be4421;
+  }
+  
+  .darkorange-txt {
+    color:#e23627;
+  }
+  
+  .darkorange-bg {
+    background-color:#e23627;
+  }
+  
+  .lightorange-txt {
+    color:#f1af7f;
+  }
+  
+  .lightorange-bg {
+    background-color:#f1af7f;
+  }
+  
+  .coral-txt {
+    color:#e66453;
+  }
+  
+  .coral-bg {
+    background-color:#e66453;
+  }
+  
+  .tomato-txt {
+    color:#FF6347;
+  }
+  
+  .tomato-bg {
+    background-color:#FF6347;
+  }
+  
+  /* yellow */
+  .yellow-txt {
+    color:#FFFF00;
+  }
+  
+  .yellow-bg {
+    background-color:#FFFF00;
+  }
+  
+  .canary-txt {
+    color:#f6be28;
+  }
+  
+  .canary-bg {
+    background-color:#f6be28;
+  }
+  
+  .gold-txt {
+    color:#ee9628;
+  }
+  
+  .gold-bg {
+    background-color:#ee9628;
+  }
+  
+  .daffodil-txt {
+    color:#fced74;
+  }
+  
+  .daffodil-bg {
+    background-color:#fced74;
+  }
+  
+  .flaxen-txt {
+    color:#cbaa48;
+  }
+  
+  .flaxen-bg {
+    background-color:#cbaa48;
+  }
+  
+  .butter-txt {
+    color:#fddf28;
+  }
+  
+  .butter-bg {
+    background-color:#fddf28;
+  }
+  
+  .lemon-txt {
+    color:#eaf94e;
+  }
+  
+  .lemon-bg {
+    background-color:#eaf94e;
+  }
+  
+  .mustard-txt {
+    color:#e1ac24;
+  }
+  
+  .mustard-bg {
+    background-color:#e1ac24;
+  }
+  
+  .corn-txt {
+    color:#ddc623;
+  }
+  
+  .corn-bg {
+    background-color:#ddc623;
+  }
+  
+  .medallion-txt {
+    color:#dba324;
+  }
+  
+  .medallion-bg {
+    background-color:#dba324;
+  }
+  
+  .dandelion-txt {
+    color:#f7c528;
+  }
+  
+  .dandelion-bg {
+    background-color:#f7c528;
+  }
+  
+  .amber-txt {
+    color:#ee9428;
+  }
+  
+  .amber-bg {
+    color:#ee9428;
+  }
+  
+  .mango-txt {
+    color:#f6bf28;
+  }
+  
+  .mango-bg {
+    background-color:#f6bf28;
+  }
+  
+  .bumblebee-txt {
+    color:#fadf27;
+  }
+  
+  .bumblebee-bg {
+    background-color:#fadf27;
+  }
+  
+  .banana-txt {
+    color:#fbf492;
+  }
+  
+  .banana-bg {
+    background-color:#fbf492;
+  }
+  
+  .butterscotch-txt {
+    color:#f3b128;
+  }
+  
+  .butterscotch-bg {
+    background-color:#f3b128;
+  }
+  
+  .dijon-txt {
+    color:#b4801d;
+  }
+  
+  .dijon-bg {
+    background-color:#b4801d;
+  }
+  
+  .lighthoney-txt {
+    color:#f5b828;
+  }
+  
+  .lighthoney-bg {
+    background-color:#f5b828;
+  }
+  
+  .blonde-txt {
+    color:#fee962;
+  }
+  
+  .blonde-bg {
+    background-color:#fee962;
+  }
+  
+  .pineapple-txt {
+    color:#fddf28;
+  }
+  
+  .pineapple-bg {
+    background-color:#fddf28;
+  }
+  
+  .sunshine-txt {
+    color:#f8c928;
+  }
+  
+  .sunshine-bg {
+    background-color:#f8c928;
+  }
+  
+  .darkyellow-txt {
+    color:#e79926;
+  }
+  
+  .darkyellow-bg {
+    background-color:#e79926;
+  }
+  
+  .lightyellow-txt {
+    color:#fff76a;
+  }
+  
+  .lightyellow-bg {
+    background-color:#fff76a;
+  }
+  
+  .lemonchiffon-txt {
+    color:#FFFACD;
+  }
+  
+  .lemonchiffon-bg {
+    background-color:#FFFACD;
+  }
+  
+  .lightgoldenrodyellow-txt {
+    color:#FAFAD2;
+  }
+  
+  .lightgoldenrodyellow-bg {
+    background-color:#FAFAD2;
+  }
+  
+  .papayawhip-txt {
+    color:#FFEFD5;
+  }
+  
+  .papayawhip-bg {
+    background-color:#FFEFD5;
+  }
+  
+  .moccasin-txt {
+    color:#FFE4B5;
+  }
+  
+  .moccasin-bg {
+    background-color:#FFE4B5;
+  }
+  
+  .peachpuff-txt {
+    color:#FFDAB9;
+  }
+  
+  .peachpuff-bg {
+    background-color:#FFDAB9;
+  }
+  
+  .palegoldenrod-txt {
+    color:#EEE8AA;
+  }
+  
+  .palegoldenrod-bg {
+    background-color:#EEE8AA;
+  }
+  
+  .khaki-txt {
+    color:#F0E68C;
+  }
+  
+  .khaki-bg {
+    background-color:#F0E68C;
+  }
+  
+  .darkkhaki-txt {
+    color:#BDB76B;
+  }
+  
+  .darkkhaki-bg {
+    background-color:#BDB76B;
+  }
+  
+  .parmesan-txt {
+    color:#fce680;
+  }
+  
+  .parmesan-bg {
+    background-color:#fce680;
+  }
+  
+  .shortbread-txt {
+    color:#fae47e;
+  }
+  
+  .shortbread-bg {
+    background-color:#fae47e;
+  }
+  
+  /* green */
+  .green-txt {
+    color:#4ca635;
+  }
+  
+  .green-bg {
+    background-color:#4ca635;
+  }
+  
+  .chartreuse-txt {
+    color:#a0f62c;
+  }
+  
+  .chartreuse-bg {
+    background-color:#a0f62c;
+  }
+  
+  .juniper-txt {
+    color:#2c430e;
+  }
+  
+  .juniper-bg {
+    background-color:#2c430e;
+  }
+  
+  .sage-txt {
+    color:#607b56;
+  }
+  
+  .sage-bg {
+    background-color:#607b56;
+  }
+  
+  .lime-txt {
+    color:#a1f549;
+  }
+  
+  .lime-bg {
+    background-color:#a1f549;
+  }
+  
+  .fern-txt {
+    color:#51b251;
+  }
+  
+  .fern-bg {
+    background-color:#51b251;
+  }
+  
+  .olive-txt {
+    color:#88b552;
+  }
+  
+  .olive-bg {
+    background-color:#88b552;
+  }
+  
+  .turquoise-txt {
+    color:#387a63;
+  }
+  
+  .turquoise-bg {
+    background-color:#387a63;
+  }
+  
+  .emerald-txt {
+    color:#397b11;
+  }
+  
+  .emerald-bg {
+    background-color:#397b11;
+  }
+  
+  .pear-txt {
+    color:#63ab23;
+  }
+  
+  .pear-bg {
+    background-color:#63ab23;
+  }
+  
+  .moss-txt {
+    color:#375c17;
+  }
+  
+  .moss-bg {
+    background-color:#375c17;
+  }
+  
+  .shamrock-txt {
+    color:#4ba215;
+  }
+  
+  .shamrock-bg {
+    background-color:#4ba215;
+  }
+  
+  .seafoam-txt {
+    color:#69ed87;
+  }
+  
+  .seafoam-bg {
+    background-color:#69ed87;
+  }
+  
+  .pine-txt {
+    color:#1d3f17;
+  }
+  
+  .pine-bg {
+    background-color:#1d3f17;
+  }
+  
+  .parakeet-txt {
+    color:#54b83c;
+  }
+  
+  .parakeet-bg {
+    background-color:#54b83c;
+  }
+  
+  .mint-txt {
+    color:#89ebb6;
+  }
+  
+  .mint-bg {
+    background-color:#89ebb6;
+  }
+  
+  .seaweed-txt {
+    color:#283a19;
+  }
+  
+  .seaweed-bg {
+    background-color:#283a19;
+  }
+  
+  .pickle-txt {
+    color:#486c28;
+  }
+  
+  .pickle-bg {
+    background-color:#486c28;
+  }
+  
+  .pistachio-txt {
+    color:#a5cab6;
+  }
+  
+  .pistachio-bg {
+    background-color:#a5cab6;
+  }
+  
+  .basil-txt {
+    color:#275022;
+  }
+  
+  .basil-bg {
+    background-color:#275022;
+  }
+  
+  .crocodile-txt {
+    color:#4e6c2d;
+  }
+  
+  .crocodile-bg {
+    background-color:#4e6c2d;
+  }
+  
+  .darkgreen-txt {
+    color:#183418;
+  }
+  
+  .darkgreen-bg {
+    background-color:#183418;
+  }
+  
+  .lightgreen-txt {
+    color:#76bd48;
+  }
+  
+  .lightgreen-bg {
+    background-color:#76bd48;
+  }
+  
+  .greenyellow-txt {
+    color:#ADFF2F;
+  }
+  
+  .greenyellow-bg {
+    background-color:#ADFF2F;
+  }
+  
+  .lawn-txt {
+    color:#7CFC00;
+  }
+  
+  .lawn-bg {
+    background-color:#7CFC00;
+  }
+  
+  .palegreen-txt {
+    color:#98FB98;
+  }
+  
+  .palegreen-bg {
+    background-color:#98FB98;
+  }
+  
+  .mediumspringgreen-txt {
+    color:#00FA9A;
+  }
+  
+  .mediumspringgreen-bg {
+    background-color:#00FA9A;
+  }
+  
+  .springgreen-txt {
+    color:#00FF7F;
+  }
+  
+  .springgreen-bg {
+    background-color:#00FF7F;
+  }
+  
+  .mediumseagreen-txt {
+    color:#3CB371;
+  }
+  
+  .mediumseagreen-bg {
+    background-color:#3CB371;
+  }
+  
+  .seagreen-txt {
+    color:#2E8B57;
+  }
+  
+  .seagreen-bg {
+    background-color:#2E8B57;
+  }
+  
+  .forestgreen-txt {
+    color:#228B22;
+  }
+  
+  .forestgreen-bg {
+    background-color:#228B22;
+  }
+  
+  .olivedrab-txt {
+    color:#6B8E23;
+  }
+  
+  .olivedrab-bg {
+    background-color:#6B8E23;
+  }
+  
+  .darkolivegreen-txt {
+    color:#556B2F;
+  }
+  
+  .darkolivegreen-bg {
+    background-color:#556B2F;
+  }
+  
+  .mediumaquamarine-txt {
+    color:#66CDAA;
+  }
+  
+  .mediumaquamarine-bg {
+    background-color:#66CDAA;
+  }
+  
+  .darkseagreen-txt {
+    color:#8FBC8B;
+  }
+  
+  .darkseagreen-bg {
+    background-color:#8FBC8B;
+  }
+  
+  .lightseagreen-txt {
+    color:#20B2AA;
+  }
+  
+  .lightseagreen-bg {
+    background-color:#20B2AA;
+  }
+  
+  .darkcyan-txt {
+    color:#008B8B;
+  }
+  
+  .darkcyan-bg {
+    background-color:#008B8B;
+  }
+  
+  /* blue */
+  .blue-txt {
+    color:#0000FF;
+  }
+  
+  .blue-bg {
+    background-color:#0000FF;
+  }
+  
+  .bluebonnet-txt {
+    color:#2b2bab;
+  }
+  
+  .bluebonnet-bg {
+    background-color:#2b2bab;
+  }
+  
+  .slate-txt {
+    color:#616774;
+  }
+  
+  .slate-bg {
+    background-color:#616774;
+  }
+  
+  .sky-txt {
+    color:#53b9d1;
+  }
+  
+  .sky-bg {
+    background-color:#53b9d1;
+  }
+  
+  .navy-txt {
+    color:#0c105e;
+  }
+  
+  .navy-bg {
+    background-color:#0c105e;
+  }
+  
+  .indigo-txt {
+    color:#1d134a;
+  }
+  
+  .indigo-bg {
+    background-color:#1d134a;
+  }
+  
+  .cobalt-txt {
+    color:#0f204b;
+  }
+  
+  .cobalt-bg {
+    background-color:#0f204b;
+  }
+  
+  .teal-txt {
+    color:#419b9d;
+  }
+  
+  .teal-bg {
+    background-color:#419b9d;
+  }
+  
+  .ocean-txt {
+    color:#214f51;
+  }
+  
+  .ocean-bg {
+    background-color:#214f51;
+  }
+  
+  .peacock-txt {
+    color:#0e2229;
+  }
+  
+  .peacock-bg {
+    background-color:#0e2229;
+  }
+  
+  .azure-txt {
+    color:#141995;
+  }
+  
+  .azure-bg {
+    background-color:#141995;
+  }
+  
+  .cerulean-txt {
+    color:#3080b5;
+  }
+  
+  .cerulean-bg {
+    background-color:#3080b5;
+  }
+  
+  .lapis-txt {
+    color:#1e1fb5;
+  }
+  
+  .lapis-bg {
+    background-color:#1e1fb5;
+  }
+  
+  .spruce-txt {
+    color:#212f3b;
+  }
+  
+  .spruce-bg {
+    color:#212f3b;
+  }
+  
+  .stone-txt {
+    color:#48657b;
+  }
+  
+  .stone-bg {
+    background-color:#48657b;
+  }
+  
+  .aegean-txt {
+    color:#17345b;
+  }
+  
+  .aegean-bg {
+    background-color:#17345b;
+  }
+  
+  .blueberry-txt {
+    color:#1c105c;
+  }
+  
+  .blueberry-bg {
+    color:#1c105c;
+  }
+  
+  .denim-txt {
+    color:#11152e;
+  }
+  
+  .denim-bg {
+    background-color:#11152e;
+  }
+  
+  .admiral-txt {
+    color:#0e1681;
+  }
+  
+  .admiral-bg {
+    background-color:#0e1681;
+  }
+  
+  .sapphire-txt {
+    color:#44a3b3;
+  }
+  
+  .sapphire-bg {
+    background-color:#44a3b3;
+  }
+  
+  .arctic-txt {
+    color:#73eafa;
+  }
+  
+  .arctic-bg {
+    background-color:#73eafa;
+  }
+  
+  .darkblue-txt {
+    color:#082450;
+  }
+  
+  .darkblue-bg {
+    background-color:#082450;
+  }
+  
+  .lightblue-txt {
+    color:#75bde4;
+  }
+  
+  .lightblue-bg {
+    background-color:#75bde4;
+  }
+  
+  .cyan-txt {
+    color:#00FFFF;
+  }
+  
+  .cyan-bg {
+    background-color:#00FFFF;
+  }
+  
+  .lightcyan-txt {
+    color:#E0FFFF;
+  }
+  
+  .lightcyan-bg {
+    background-color:#E0FFFF;
+  }
+  
+  .paleturquoise-txt {
+    color:#AFEEEE;
+  }
+  
+  .paleturquoise-bg {
+    background-color:#AFEEEE;
+  }
+  
+  .mediumturquoise-txt {
+    color:#48D1CC;
+  }
+  
+  .mediumturquoise-bg {
+    background-color:#48D1CC;
+  }
+  
+  .cadetblue-txt {
+    color:#5F9EA0;
+  }
+  
+  .cadetblue-bg {
+    background-color:#5F9EA0;
+  }
+  
+  .steelblue-txt {
+    color:#4682B4;
+  }
+  
+  .steelblue-bg {
+    background-color:#4682B4;
+  }
+  
+  .powderblue-txt {
+    color:#B0E0E6;
+  }
+  
+  .powderblue-bg {
+    background-color:#B0E0E6;
+  }
+  
+  .royalblue-txt {
+    color:#4169E1;
+  }
+  
+  .royalblue-bg {
+    background-color:#4169E1;
+  }
+  
+  .midnightblue-txt {
+    color:#191970;
+  }
+  
+  .midnightblue-bg {
+    background-color:#191970;
+  }
+  
+  /* purple */
+  .purple-txt {
+    color:#611f94;
+  }
+  
+  .purple-bg {
+    background-color:#611f94;
+  }
+  
+  .mauve-txt {
+    color:#7a4957;
+  }
+  
+  .mauve-bg {
+    background-color:#7a4957;
+  }
+  
+  .violet-txt {
+    color:#5f1c80;
+  }
+  
+  .violet-bg {
+    background-color:#5f1c80;
+  }
+  
+  .boysenberry-txt {
+    color:#4f1029;
+  }
+  
+  .boysenberry-bg {
+    background-color:#4f1029;
+  }
+  
+  .lavender-txt {
+    color:#E6E6FA;
+  }
+  
+  .lavender-bg {
+    background-color:#E6E6FA;
+  }
+  
+  .plum-txt {
+    color:#4c1129;
+  }
+  
+  .plum-bg {
+    background-color:#4c1129;
+  }
+  
+  .magenta-txt {
+    color:#8f1c47;
+  }
+  
+  .magenta-bg {
+    background-color:#8f1c47;
+  }
+  
+  .lilac-txt {
+    color:#ad84ae;
+  }
+  
+  .lilac-bg {
+    background-color:#ad84ae;
+  }
+  
+  .grape-txt {
+    color:#522237;
+  }
+  
+  .grape-bg {
+    background-color:#522237;
+  }
+  
+  .periwinkle-txt {
+    color:#ae7dc8;
+  }
+  
+  .periwinkle-bg {
+    background-color:#ae7dc8;
+  }
+  
+  .darkplum-txt {
+    color:#3b0c1e;
+  }
+  
+  .darkplum-bg {
+    background-color:#3b0c1e;
+  }
+  
+  .eggplant-txt {
+    color:#250e26;
+  }
+  
+  .eggplant-bg {
+    background-color:#250e26;
+  }
+  
+  .jam-txt {
+    color:#531022;
+  }
+  
+  .jam-bg {
+    background-color:#531022;
+  }
+  
+  .iris-txt {
+    color:#844cb8;
+  }
+  
+  .iris-bg {
+    background-color:#844cb8;
+  }
+  
+  .heather-txt {
+    color:#8965aa;
+  }
+  
+  .heather-bg {
+    background-color:#8965aa;
+  }
+  
+  .amethyst-txt {
+    color:#9140de;
+  }
+  
+  .amethyst-bg {
+    background-color:#9140de;
+  }
+  
+  .raisin-txt {
+    color:#1e0811;
+  }
+  
+  .raisin-bg {
+    background-color:#1e0811;
+  }
+  
+  .orchid-txt {
+    color:#9d4be9;
+  }
+  
+  .orchid-bg {
+    background-color:#9d4be9;
+  }
+  
+  .mulberry-txt {
+    color:#3b0b18;
+  }
+  
+  .mulberry-bg {
+    background-color:#3b0b18;
+  }
+  
+  .darkpurple-txt {
+    color:#32114a;
+  }
+  
+  .darkpurple-bg {
+    background-color:#32114a;
+  }
+  
+  .lightpurple-txt {
+    color:#a262cc;
+  }
+  
+  .lightpurple-bg {
+    background-color:#a262cc;
+  }
+  
+  .thistle-txt {
+    color:#D8BFD8;
+  }
+  
+  .thistle-bg {
+    background-color:#D8BFD8;
+  }
+  
+  .mediumorchid-txt {
+    color:#BA55D3;
+  }
+  
+  .mediumorchid-bg {
+    background-color:#BA55D3;
+  }
+  
+  .rebeccapurple-txt {
+    color:#663399;
+  }
+  
+  .rebeccapurple-bg {
+    background-color:#663399;
+  }
+  
+  .blueviolet-txt {
+    color:#8A2BE2;
+  }
+  
+  .blueviolet-bg {
+    background-color:#8A2BE2;
+  }
+  
+  .darkviolet-txt {
+    color:#9400D3;
+  }
+  
+  .darkviolet-bg {
+    background-color:#9400D3;
+  }
+  
+  darkorchid-txt {
+    color:#9932CC;
+  }
+  
+  darkorchid-bg {
+    background-color:#9932CC;
+  }
+  
+  .indigo-txt {
+    color:#4B0082;
+  }
+  
+  .indigo-bg {
+    background-color:#4B0082;
+  }
+  
+  .slateblue-txt {
+    color:#6A5ACD;
+  }
+  
+  .slateblue-bg {
+    background-color:#6A5ACD;
+  }
+  
+  .darkslateblue-txt {
+    color:#483D8B;
+  }
+  
+  .darkslateblue-bg {
+    background-color:#483D8B;
+  }
+  
+  /* pink */
+  .pink-txt {
+    color:#e883c2;
+  }
+  
+  .pink-bg {
+    background-color:#e883c2;
+  }
+  
+  .lightrose-txt {
+    color:#e87c9c;
+  }
+  
+  .lightrose-bg {
+    background-color:#e87c9c;
+  }
+  
+  .fuchsia-txt {
+    color:#df2f98;
+  }
+  
+  .fuchsia-bg {
+    background-color:#df2f98;
+  }
+  
+  .punch-txt {
+    color:#e13664;
+  }
+  
+  .punch-bg {
+    background-color:#e13664;
+  }
+  
+  .lightblush-txt {
+    color:#efb4df;
+  }
+  
+  .lightblush-bg {
+    background-color:#efb4df;
+  }
+  
+  .watermelon-txt {
+    color:#e56489;
+  }
+  
+  .watermelon-bg {
+    background-color:#e56489;
+  }
+  
+  .flamingo-txt {
+    color:#ea8fa9;
+  }
+  
+  .flamingo-bg {
+    background-color:#ea8fa9;
+  }
+  
+  .rouge-txt {
+    color:#e35078;
+  }
+  
+  .rouge-bg {
+    background-color:#e35078;
+  }
+  
+  .peach-txt {
+    color:#e97e6f;
+  }
+  
+  .peach-bg {
+    background-color:#e97e6f;
+  }
+  
+  .strawberry-txt {
+    color:#e12f3a;
+  }
+  
+  .strawberry-bg {
+    background-color:#e12f3a;
+  }
+  
+  .rosewood-txt {
+    color:#8d2f32;
+  }
+  
+  .rosewood-bg {
+    background-color:#8d2f32;
+  }
+  
+  .babypink-txt {
+    color:#efaabf;
+  }
+  
+  .babypink-bg {
+    background-color:#efaabf;
+  }
+  
+  .taffy-txt {
+    color:#e46bb8;
+  }
+  
+  .taffy-bg {
+    background-color:#e46bb8;
+  }
+  
+  .bubblegum-txt {
+    color:#e03b96;
+  }
+  
+  .bubblegum-bg {
+    background-color:#e03b96;
+  }
+  
+  .ballet-txt {
+    color:#e883b1;
+  }
+  
+  .ballet-bg {
+    background-color:#e883b1;
+  }
+  
+  .crepe-txt {
+    color:#edb4a6;
+  }
+  
+  .crepe-bg {
+    background-color:#edb4a6;
+  }
+  
+  .deeppink-txt {
+    color:#FF1493;
+  }
+  
+  .deeppink-bg {
+    background-color:#FF1493;
+  }
+  
+  .hotpink-txt {
+    color:#e02d81;
+  }
+  
+  .hotpink-bg {
+    background-color:#e02d81;
+  }
+  
+  .lightpink-txt {
+    color:#FFB6C1;
+  }
+  
+  .lightpink-bg {
+    background-color:#FFB6C1;
+  }
+  
+  .mediumvioletred-txt {
+    color:#C71585;
+  }
+  
+  .mediumvioletred-bg {
+    background-color:#C71585;
+  }
+  
+  .palevioletred-txt {
+    color:#DB7093;
+  }
+  
+  .palevioletred-bg {
+    background-color:#DB7093;
+  }
+  
+  /* white */
+  .white-txt {
+    color:#FFFFFF;
+  }
+  
+  .white-bg {
+    background-color:#FFFFFF;
+  }
+  
+  .pearl-txt {
+    color:#fafbf5;
+  }
+  
+  .pearl-bg {
+    background-color:#fafbf5;
+  }
+  
+  .alabaster-txt {
+    color:#fdf8ee;
+  }
+  
+  .alabaster-bg {
+    background-color:#fdf8ee;
+  }
+  
+  .snow-txt {
+    color:#FFFAFA;
+  }
+  
+  .snow-bg {
+    background-color:#FFFAFA;
+  }
+  
+  .ivory-txt {
+    color:#FFFFF0;
+  }
+  
+  .ivory-bg {
+    background-color:#FFFFF0;
+  }
+  
+  .cream-txt {
+    color:#fefad2;
+  }
+  
+  .cream-bg {
+    background-color:#fefad2;
+  }
+  
+  .eggshell-txt {
+    color:#fef8dc;
+  }
+  
+  .eggshell-bg {
+    background-color:#fef8dc;
+  }
+  
+  .cotton-txt {
+    color:#fafbf5;
+  }
+  
+  .cotton-bg {
+    background-color:#fafbf5;
+  }
+  
+  .chiffon-txt {
+    color:#f9faef;
+  }
+  
+  .chiffon-bg {
+    background-color:#f9faef;
+  }
+  
+  .salt-txt {
+    color:#f5ebe8;
+  }
+  
+  .salt-bg {
+    background-color:#f5ebe8;
+  }
+  
+  .lace-txt {
+    color:#f8f0e6;
+  }
+  
+  .lace-bg {
+    background-color:#f8f0e6;
+  }
+  
+  .coconut-txt {
+    color:#fceee0;
+  }
+  
+  .coconut-bg {
+    background-color:#fceee0;
+  }
+  
+  .linen-txt {
+    color:#FAF0E6;
+  }
+  
+  .linen-bg {
+    background-color:#FAF0E6;
+  }
+  
+  .bone-txt {
+    color:#e1d8c1;
+  }
+  
+  .bone-bg {
+    background-color:#e1d8c1;
+  }
+  
+  .daisy-txt {
+    color:#fff;
+  }
+  
+  .daisy-bg {
+    background-color:#fff;
+  }
+  
+  .powder-txt {
+    color:#fafbf5;
+  }
+  
+  .powder-bg {
+    background-color:#fafbf5;
+  }
+  
+  .frost-txt {
+    color:#e8fcfc;
+  }
+  
+  .frost-bg {
+    background-color:#e8fcfc;
+  }
+  
+  .porcelain-txt {
+    color:#fffefb;
+  }
+  
+  .porcelain-bg {
+    background-color:#fffefb;
+  }
+  
+  .parchment-txt {
+    color:#faf3d7;
+  }
+  
+  .parchment-bg {
+    background-color:#faf3d7;
+  }
+  
+  .rice-txt {
+    color:#f9f2eb;
+  }
+  
+  .rice-bg {
+    background-color:#f9f2eb;
+  }
+  
+  .honeydew-txt {
+    color:#F0FFF0;
+  }
+  
+  .honeydew-bg {
+    background-color:#F0FFF0;
+  }
+  
+  .mintcream-txt {
+    color:#F5FFFA;
+  }
+  
+  .mintcream-bg {
+    background-color:#F5FFFA;
+  }
+  
+  .azure-txt {
+    color:#F0FFFF;
+  }
+  
+  .azure-bg {
+    background-color:#F0FFFF;
+  }
+  
+  .aliceblue-txt {
+    color:#F0F8FF;
+  }
+  
+  .aliceblue-bg {
+    background-color:#F0F8FF;
+  }
+  
+  .ghostwhite-txt {
+    color:#F8F8FF;
+  }
+  
+  .ghostwhite-bg {
+    background-color:#F8F8FF;
+  }
+  
+  .whitesmoke-txt {
+    color:#F5F5F5;
+  }
+  
+  .whitesmoke-bg {
+    background-color:#F5F5F5;
+  }
+  
+  .seashell-txt {
+    color:#FFF5EE;
+  }
+  
+  .seashell-bg {
+    background-color:#FFF5EE;
+  }
+  
+  .beige-txt {
+    color:#F5F5DC;
+  }
+  
+  .beige-bg {
+    background-color:#F5F5DC;
+  }
+  
+  .oldlace-txt {
+    color:#FDF5E6;
+  }
+  
+  .oldlace-bg {
+    background-color:#FDF5E6;
+  }
+  
+  .floralwhite-txt {
+    color:#FFFAF0;
+  }
+  
+  .floralwhite-bg {
+    background-color:#FFFAF0;
+  }
+  
+  .antiquewhite-txt {
+    color:#FAEBD7;
+  }
+  
+  .antiquewhite-bg {
+    background-color:#FAEBD7;
+  }
+  
+  .lavenderblush-txt {
+    color:#FFF0F5;
+  }
+  
+  .lavenderblush-bg {
+    background-color:#FFF0F5;
+  }
+  
+  .mistyrose-txt {
+    color:#FFE4E1;
+  }
+  
+  .mistyrose-bg {
+    background-color:#FFE4E1;
+  }
+  
+  /* black */
+  .black-txt {
+    color:#000;
+  }
+  
+  .black-bg {
+    background-color:#000;
+  }
+  
+  .ebony-txt {
+    color:#090502;
+  }
+  
+  .ebony-bg {
+    background-color:#090502;
+  }
+  
+  .crow-txt {
+    color:#0c0a08;
+  }
+  
+  .crow-bg {
+    background-color:#0c0a08;
+  }
+  
+  .charcoal-txt {
+    color:#1e1a16;
+  }
+  
+  .charcoal-bg {
+    background-color:#1e1a16;
+  }
+  
+  .midnight-txt {
+    color:#000005;
+  }
+  
+  .midnight-bg {
+    background-color:#000005;
+  }
+  
+  .raven-txt {
+    color:#050401;
+  }
+  
+  .raven-bg {
+    background-color:#050401;
+  }
+  
+  .oil-txt {
+    color:#060100;
+  }
+  
+  .oil-bg {
+    background-color:#060100;
+  }
+  
+  .grease-txt {
+    color:#0a0908;
+  }
+  
+  .grease-bg {
+    background-color:#0a0908;
+  }
+  
+  .onyx-txt {
+    color:#040007;
+  }
+  
+  .onyx-bg {
+    background-color:#040007;
+  }
+  
+  .pitch-txt {
+    color:#030001;
+  }
+  
+  .pitch-bg {
+    background-color:#030001;
+  }
+  
+  .soot-txt {
+    color:#110d07;
+  }
+  
+  .soot-bg {
+    background-color:#110d07;
+  }
+  
+  .sable-txt {
+    color:#040200;
+  }
+  
+  .sable-bg {
+    background-color:#040200;
+  }
+  
+  .coal-txt {
+    color:#0b0a09;
+  }
+  
+  .coal-bg {
+    background-color:#0b0a09;
+  }
+  
+  .metal-txt {
+    color:#0c0b0a;
+  }
+  
+  .metal-bg {
+    background-color:#0c0b0a;
+  }
+  
+  .obsidian-txt {
+    color:#0b010a;
+  }
+  
+  .obsidian-bg {
+    background-color:#0b010a;
+  }
+  
+  .leather-txt {
+    color:#14100a;
+  }
+  
+  .leather-bg {
+    color:#14100a;
+  }
+  
+  .blackred-txt {
+    color:#1f0000;
+  }
+  
+  .blackred-bg {
+    background-color:#1f0000;
+  }
+  
+  .blackblue-txt {
+    color:#00021f;
+  }
+  
+  .blackblue-bg {
+    background-color:#00021f;
+  }
+  
+  /* gray */
+  .gray-txt {
+    color:#808080;
+  }
+  
+  .gray-bg {
+    background-color:#808080;
+  }
+  
+  .shadow-txt {
+    color:#2a2a2a;
+  }
+  
+  .shadow-bg {
+    background-color:#2a2a2a;
+  }
+  
+  .graphite-txt {
+    color:#463b49;
+  }
+  
+  .graphite-bg {
+    background-color:#463b49;
+  }
+  
+  .iron-txt {
+    color:#252125;
+  }
+  
+  .iron-bg {
+    background-color:#252125;
+  }
+  
+  .pewter-txt {
+    color:#57546d;
+  }
+  
+  .pewter-bg {
+    background-color:#57546d;
+  }
+  
+  .cloud-txt {
+    color:#bab9c5;
+  }
+  
+  .cloud-bg {
+    background-color:#bab9c5;
+  }
+  
+  .silver-txt {
+    color:#9d9cbb;
+  }
+  
+  .silver-bg {
+    background-color:#9d9cbb;
+  }
+  
+  .smoke-txt {
+    color:#463f4b;
+  }
+  
+  .smoke-bg {
+    background-color:#463f4b;
+  }
+  
+  .anchor-txt {
+    color:#33323b;
+  }
+  
+  .anchor-bg {
+    background-color:#33323b;
+  }
+  
+  .ash-txt {
+    color:#433b3c;
+  }
+  
+  .ash-bg {
+    background-color:#433b3c;
+  }
+  
+  .porpoise-txt {
+    color:#3c3a49;
+  }
+  
+  .porpoise-bg {
+    background-color:#3c3a49;
+  }
+  
+  .dove-txt {
+    color:#68596c;
+  }
+  
+  .dove-bg {
+    background-color:#68596c;
+  }
+  
+  .fog-txt {
+    color:#524652;
+  }
+  
+  .fog-bg {
+    background-color:#524652;
+  }
+  
+  .flint-txt {
+    color:#6a688a;
+  }
+  
+  .flint-bg {
+    background-color:#6a688a;
+  }
+  
+  .pebble-txt {
+    color:#262626;
+  }
+  
+  .pebble-bg {
+    background-color:#262626;
+  }
+  
+  .lead-txt {
+    color:#31303c;
+  }
+  
+  .lead-bg {
+    background-color:#31303c;
+  }
+  
+  .fossil-txt {
+    color:#655e63;
+  }
+  
+  .fossil-bg {
+    background-color:#655e63;
+  }
+  
+  .gainsboro-txt {
+    color:#DCDCDC;
+  }
+  
+  .gainsboro-bg {
+    background-color:#DCDCDC;
+  }
+  
+  .lightgray-txt {
+    color:#D3D3D3;
+  }
+  
+  .lightgray-bg {
+    background-color:#D3D3D3;
+  }
+  
+  .silver-txt {
+    color:#C0C0C0;
+  }
+  
+  .silver-bg {
+    background-color:#C0C0C0;
+  }
+  
+  .darkgray-txt {
+    color:#A9A9A9;
+  }
+  
+  .darkgray-bg {
+    background-color:#A9A9A9;
+  }
+  
+  .dimgray-txt {
+    color:#696969;
+  }
+  
+  .dimgray-bg {
+    background-color:#696969;
+  }
+  
+  .lightslategray-txt {
+    color:#778899;
+  }
+  
+  .lightslategray-bg {
+    background-color:#778899;
+  }
+  
+  .slategray-txt {
+    color:#708090;
+  }
+  
+  .slategray-bg {
+    background-color:#708090;
+  }
+  
+  .darkslategray-txt {
+    color:#2F4F4F;
+  }
+  
+  .darkslategray-bg {
+    background-color:#2F4F4F;
+  }
+  
+  /* brown */
+  .brown-txt {
+    color:#231201;
+  }
+  
+  .brown-bg {
+    background-color:#231201;
+  }
+  
+  .coffee-txt {
+    color:#3a2a15;
+  }
+  
+  .coffee-bg {
+    background-color:#3a2a15;
+  }
+  
+  .mocha-txt {
+    color:#2d1e0c;
+  }
+  
+  .mocha-bg {
+    background-color:#2d1e0c;
+  }
+  
+  .peanut-txt {
+    color:#654a27;
+  }
+  
+  .peanut-bg {
+    background-color:#654a27;
+  }
+  
+  .carob-txt {
+    color:#281d12;
+  }
+  
+  .carob-bg {
+    background-color:#281d12;
+  }
+  
+  .hickory-txt {
+    color:#29160e;
+  }
+  
+  .hickory-bg {
+    background-color:#29160e;
+  }
+  
+  .wood-txt {
+    color:#302416;
+  }
+  
+  .wood-bg {
+    background-color:#302416;
+  }
+  
+  .pecan-txt {
+    color:#391b0f;
+  }
+  
+  .pecan-bg {
+    background-color:#391b0f;
+  }
+  
+  .walnut-txt {
+    color:#331d0e;
+  }
+  
+  .walnut-bg {
+    background-color:#331d0e;
+  }
+  
+  .caramel-txt {
+    color:#51270e;
+  }
+  
+  .caramel-bg {
+    background-color:#51270e;
+  }
+  
+  .gingerbread-txt {
+    color:#4a200d;
+  }
+  
+  .gingerbread-bg {
+    background-color:#4a200d;
+  }
+  
+  .syrup-txt {
+    color:#361809;
+  }
+  
+  .syrup-bg {
+    background-color:#361809;
+  }
+  
+  .chocolate-txt {
+    color:#201004;
+  }
+  
+  .chocolate-bg {
+    background-color:#201004;
+  }
+  
+  .tortilla-txt {
+    color:#88683e;
+  }
+  
+  .tortilla-bg {
+    background-color:#88683e;
+  }
+  
+  .umber-txt {
+    color:#281a10;
+  }
+  
+  .umber-bg {
+    background-color:#281a10;
+  }
+  
+  .tawny-txt {
+    color:#693716;
+  }
+  
+  .tawny-bg {
+    background-color:#693716;
+  }
+  
+  .brunette-txt {
+    color:#2b1609;
+  }
+  
+  .brunette-bg {
+    background-color:#2b1609;
+  }
+  
+  .cinnamon-txt {
+    color:#4f1e0e;
+  }
+  
+  .cinnamon-bg {
+    background-color:#4f1e0e;
+  }
+  
+  .penny-txt {
+    color:#401e11;
+  }
+  
+  .penny-bg {
+    background-color:#401e11;
+  }
+  
+  .cedar-txt {
+    color:#39291e;
+  }
+  
+  .cedar-bg {
+    background-color:#39291e;
+  }
+  
+  .tan-txt {
+    color:#D2B48C;
+  }
+  
+  .tan-bg {
+    background-color:#D2B48C;
+  }
+  
+  .macaroon-txt {
+    color:#f5db64;
+  }
+  
+  .macaroon-bg {
+    background-color:#f5db64;
+  }
+  
+  .hazelwood-txt {
+    color:#bdae7a;
+  }
+  
+  .hazelwood-bg {
+    background-color:#bdae7a;
+  }
+  
+  .granola-txt {
+    color:#cbaa48;
+  }
+  
+  .granola-bg {
+    background-color:#cbaa48;
+  }
+  
+  .oat-txt {
+    color:#d6bf78;
+  }
+  
+  .oat-bg {
+    background-color:#d6bf78;
+  }
+  
+  .fawn-txt {
+    color:#ba9b40;
+  }
+  
+  .fawn-bg {
+    background-color:#ba9b40;
+  }
+  
+  .sugarcookie-txt {
+    color:#f0e99d;
+  }
+  
+  .sugarcookie-bg {
+    background-color:#f0e99d;
+  }
+  
+  .sand-txt {
+    color:#cdad51;
+  }
+  
+  .sand-bg {
+    background-color:#cdad51;
+  }
+  
+  .sepia-txt {
+    color:#dcaa65;
+  }
+  
+  .sepia-bg {
+    background-color:#dcaa65;
+  }
+  
+  .latte-txt {
+    color:#e3b568;
+  }
+  
+  .latte-bg {
+    background-color:#e3b568;
+  }
+  
+  .oyster-txt {
+    color:#d3cf8f;
+  }
+  
+  .oyster-bg {
+    background-color:#d3cf8f;
+  }
+  
+  .biscotti-txt {
+    color:#dbb952;
+  }
+  
+  .biscotti-bg {
+    background-color:#dbb952;
+  }
+  
+  .cornsilk-txt {
+    color:#FFF8DC;
+  }
+  
+  .cornsilk-bg {
+    background-color:#FFF8DC;
+  }
+  
+  .blanchedalmond-txt {
+    color:#FFEBCD;
+  }
+  
+  .blanchedalmond-bg {
+    background-color:#FFEBCD;
+  }
+  
+  .bisque-txt {
+    color:#FFE4C4;
+  }
+  
+  .bisque-bg {
+    background-color:#FFE4C4;
+  }
+  
+  .navajowhite-txt {
+    color:#FFDEAD;
+  }
+  
+  .navajowhite-bg {
+    background-color:#FFDEAD;
+  }
+  
+  .wheat-txt {
+    color:#F5DEB3;
+  }
+  
+  .wheat-bg {
+    background-color:#F5DEB3;
+  }
+  
+  .burlywood-txt {
+    color:#DEB887;
+  }
+  
+  .burlywood-bg {
+    background-color:#DEB887;
+  }
+  
+  .rosybrown-txt {
+    color:#BC8F8F;
+  }
+  
+  .rosybrown-bg {
+    background-color:#BC8F8F;
+  }
+  
+  .sandybrown-txt {
+    color:#F4A460;
+  }
+  
+  .sandybrown-bg {
+    background-color:#F4A460;
+  }
+  
+  .goldenrod-txt {
+    color:#DAA520;
+  }
+  
+  .goldenrod-bg {
+    color:#DAA520;
+  }
+  
+  .peru-txt {
+    color:#CD853F;
+  }
+  
+  .peru-bg {
+    background-color:#CD853F;
+  }
+  
+  .saddlebrown-txt {
+    color:#8B4513;
+  }
+  
+  .saddlebrown-bg {
+    background-color:#8B4513;
+  }
+  
+  .sienna-txt {
+    color:#A0522D;
+  }
+  
+  .sienna-bg {
+    background-color:#A0522D;
+  }
